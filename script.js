@@ -75,10 +75,9 @@ form.addEventListener('submit',(e)=>{
 
 })
 
-// const logo = document.querySelector(".logo")
+ const logo = document.querySelector(".logo")
 
-// logo.addEventListener('click', goToHomePage())
-
-// function goToHomePage (){
-//     window.location = '/';
-// }
+logo.addEventListener('click', goToHomePage())
+ function goToHomePage (){
+    window.location = '/';
+}
