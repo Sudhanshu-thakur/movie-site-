@@ -1,9 +1,11 @@
-const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1'
+const MOVIE_URL = 'https://api.themoviedb.org/3/trending/all/day?language=en-US&api_key=a183034ff0e773db98a567b284957b6e&page=1'
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
+const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=a183034ff0e773db98a567b284957b6e&query="'
+const SERIES_URL = 'https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&api_key=a183034ff0e773db98a567b284957b6e&page=1'
+const POPUlAR_URL = 'https://api.themoviedb.org/3/movie/popular?language=en-US&api_key=a183034ff0e773db98a567b284957b6e&page=1'
+const UPCOMING_URL = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&api_key=a183034ff0e773db98a567b284957b6e&page=1'
 
-
-getMovies(API_URL)
+getMovies(MOVIE_URL)
 
 async function getMovies(url) {
     const res = await fetch(url)
@@ -11,6 +13,7 @@ async function getMovies(url) {
 
     showMovies(data.results)
 }
+
 
 
 function showMovies(movies){
@@ -75,9 +78,25 @@ form.addEventListener('submit',(e)=>{
 
 })
 
-//  const logo = document.querySelector(".logo")
+const logo = document.querySelector(".logo")
 
-// logo.addEventListener('click', goToHomePage())
-//  function goToHomePage (){
-//     window.location = '/';
-// }
+logo.addEventListener('click', goToHomePage())
+
+function goToHomePage (){
+    
+}
+
+
+const toggle = document.querySelector('.toggle-ball')
+const itmes = document.querySelectorAll('.container,.navbar-container,.toggle,.search')
+
+
+toggle.addEventListener('click', changeBackground)
+
+function changeBackground (){
+  itmes.forEach( x =>{
+    x.classList.toggle("active")
+  })
+  
+}
+
