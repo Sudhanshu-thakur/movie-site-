@@ -2,7 +2,7 @@ const MOVIE_URL = 'https://api.themoviedb.org/3/trending/all/day?language=en-US&
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=a183034ff0e773db98a567b284957b6e&query="'
 const SERIES_URL = 'https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&sort_by=popularity.desc&api_key=a183034ff0e773db98a567b284957b6e&page=1'
-const POPUlAR_URL = 'https://api.themoviedb.org/3/movie/popular?language=en-US&api_key=a183034ff0e773db98a567b284957b6e&page=1'
+
 const UPCOMING_URL = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&api_key=a183034ff0e773db98a567b284957b6e&page=1'
 
 getMovies(MOVIE_URL)
